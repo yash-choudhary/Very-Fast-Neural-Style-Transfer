@@ -5,11 +5,25 @@ According to Wikipedia, Neural Style Transfer (NST) also called Artistic Style T
 
 In simple words, Neural style transfer is the process of creating art using computers. It is the process of painting the contents of one image with the style of another.
 
+## Our Content Image
+<p align="center">
+  <img src="assets/japanese_garden.jpg" width="500">
+  <br>
+  <em> Fig 1. Content Image</em>
+</p>
+
+## Our Style Image
+<p align="center">
+  <img src="assets/picasso_selfportrait.jpg" width="500">
+  <br>
+  <em> Fig 2. Style Image</em>
+</p>
+
 ## **How does NST work?**
 <p align="center">
   <img src="https://miro.medium.com/max/1294/1*ZgW520SZr1QkGoFd3xqYMw.jpeg" width="500" title="How neural style transfer works.">
   <br>
-  <em> Fig 1. Neural style transfer working</em>
+  <em> Fig 3. Neural style transfer working</em>
 </p>
 
 First, Let's discuss the traditional approach of neural style transfer first given by Gatys et al. in there paper "A Neural Algorithm of Artistic Style".It was built on a very neat idea that, 
@@ -27,7 +41,7 @@ The basic idea behind this approach is that CNN pretrained on large image datase
 <p align="center">
   <img src="https://miro.medium.com/max/1400/1*EvBcni8o_O3v4RUl640TZQ@2x.png" width="500">
   <br>
-  <em>Fig 2. VGG16 laverwise extracted features</em>
+  <em>Fig 4. VGG16 laverwise extracted features</em>
 </p>
 
 So, content, style and generated images are passed through the network and the weigts of specific layers are compared using loss fuctions like content loss and style loss. 
@@ -56,7 +70,7 @@ The solution is to generalize the approach, using something like a neural net th
 <p align="center">
   <img src="https://www.fritz.ai/images/fast_style_transfer_arch.jpg" width="500">
   <br>
-  <em>Fig 3. The Transfer Network</em>
+  <em>Fig 5. The Transfer Network</em>
 </p>
 
 Training a style transfer model requires two networks: a pre-trained feature extractor and a transfer network. The pre-trained feature extractor is used to avoid having to us paired training data. It’s usefulness arises from the curious tendency for individual layers of deep convolutional neural networks trained for image classification to specialize in understanding specific features of an image.
@@ -76,16 +90,57 @@ The quality of the stylized image is defined by a custom loss function that has 
 6. tqdm == 4.45.0
 The notebook was checked on CUDA Version == 10.1
 ## Usage:
-Just open the provided notebook.ipynb in colab or your local GPU enabled machine. 
+Just open the provided notebook.ipynb in colab or your local GPU enabled machine. Run the fast_trainer function to train your custom model or use the provided pretrained model with the test function to generate results.
+
+## Experiments
+I experimented with different layer formats and style and content weights and there are the results of each experiment.
+| **Experiment Number** |  **1**  |  **2**  |  **3**  |  **4**  |  **5**  |
+|-----------------------|:-------:|:-------:|:-------:|:-------:|:-------:|
+| **batch_size**        |    4    |    4    |    4    |    8    |    4    |
+| **epochs**            |    10   |    4    |    2    |    20   |    2    |
+| **style_weight**      |   1e10  |  10e10  |  10e10  |  10e10  |  10e20  |
+| **content_weight**    |   1e5   |   10e3  |   10e5  |   10e5  |   10e3  |
+| **maxpool/avgpool**   | maxpool | maxpool | maxpool | avgpool | maxpool |
+<br>
+You can access the resuling images of each experiment in "experiments" folder of this repo.<br>
+
+<p align="center">
+  <img src="assets/grid.png" width="500">
+  <br>
+  <em>Fig 6. Experiment Results</em>
+</p>
+
+## Result
+The 3 best outputs from my models are:
+<p align="center">
+  <img src="Results/best_output1.jpg" width="900">
+  <br>
+  <em>Fig 7. Best Result 1 [More Weight to Style]</em>
+</p>
+<p align="center">
+  <img src="Results/best_output2.jpg" width="900">
+  <br>
+  <em>Fig 8. Best Result 2 [Balanced Style and content]</em>
+</p>
+<p align="center">
+  <img src="Results/best_output3.jpg" width="900">
+  <br>
+  <em>Fig 9. Best Result 3 [More Weight to Content]</em>
+</p>
+
+## Important Links
+Train Dataset Link: http://images.cocodataset.org/zips/test2017.zip 
+Style Image: https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg 
+Content Image: https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg 
+Best Model: https://github.com/yash-choudhary/Neural-Style-Transfer/raw/master/Results/best_model.pth
 
 References:
-1. [Style Transfer Guide](https://www.fritz.ai/style-transfer/)
-2. [Breaking Down Leon Gatys’ Neural Style Transfer in PyTorch](https://towardsdatascience.com/breaking-down-leon-gatys-neural-style-transfer-in-pytorch-faf9f0eb79db)
-3. [Intuitive Guide to Neural Style Transfer](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-neural-style-transfer-ef88e46697ee)
-4. [A Neural Algorithm of Artistic Style By
-Leon A. Gatys, Alexander S. Ecker, Matthias Bethge](https://arxiv.org/abs/1508.06576)
-5. [Perceptual Losses for Real-Time Style Transfer and Super-Resolution by Justin Johnson, Alexandre Alahi, Li Fei-Fei](https://arxiv.org/abs/1603.08155)
-6. [Neural Style Transfer on Real Time Video (With Full implementable code)](https://towardsdatascience.com/neural-style-transfer-on-real-time-video-with-full-implementable-code-ac2dbc0e9822)
-7. [Classic Neural Style Transfer](https://github.com/halahup/NeuralStyleTransfer)
-4. [Fast Neural Style Transfer using Lua](https://github.com/lengstrom/fast-style-transfer)
-5. [Fast Neural Style Transfer using Python](https://github.com/eriklindernoren/Fast-Neural-Style-Transfer)
+1. ![Style Transfer Guide](https://www.fritz.ai/style-transfer/)
+2. ![Breaking Down Leon Gatys’ Neural Style Transfer in PyTorch](https://towardsdatascience.com/breaking-down-leon-gatys-neural-style-transfer-in-pytorch-faf9f0eb79db)
+3. ![Intuitive Guide to Neural Style Transfer](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-neural-style-transfer-ef88e46697ee)
+4. ![A Neural Algorithm of Artistic Style ByLeon A. Gatys, Alexander S. Ecker, Matthias Bethge](https://arxiv.org/abs/1508.06576)
+5. ![Perceptual Losses for Real-Time Style Transfer and Super-Resolution by Justin Johnson, Alexandre Alahi, Li Fei-Fei](https://arxiv.org/abs/1603.08155)
+6. ![Neural Style Transfer on Real Time Video (With Full implementable code)](https://towardsdatascience.com/neural-style-transfer-on-real-time-video-with-full-implementable-code-ac2dbc0e9822)
+7. ![Classic Neural Style Transfer](https://github.com/halahup/NeuralStyleTransfer)
+4. ![Fast Neural Style Transfer using Lua](https://github.com/lengstrom/fast-style-transfer)
+5. ![Fast Neural Style Transfer using Python](https://github.com/eriklindernoren/Fast-Neural-Style-Transfer)
