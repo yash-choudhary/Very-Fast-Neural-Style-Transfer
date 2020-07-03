@@ -14,7 +14,7 @@ In simple words, Neural style transfer is the process of creating art using comp
 
 ## Our Style Image
 <p align="center">
-  <img src="assets/picasso_selfportrait.jpg" width="500">
+  <img src="assets/picasso_selfportrait.jpg" width="300">
   <br>
   <em> Fig 2. Style Image</em>
 </p>
@@ -105,7 +105,7 @@ I experimented with different layer formats and style and content weights and th
 You can access the resuling images of each experiment in "experiments" folder of this repo.<br>
 
 <p align="center">
-  <img src="assets/grid.png" width="500">
+  <img src="assets/grid.png" width="900">
   <br>
   <em>Fig 6. Experiment Results</em>
 </p>
@@ -127,20 +127,27 @@ The 3 best outputs from my models are:
   <br>
   <em>Fig 9. Best Result 3 [More Weight to Content]</em>
 </p>
+<p align="center">
+  <img src="assets/animate.gif" width="900">
+  <br>
+  <em>Fig 10. Animation of improving outputs.</em>
+</p>
 
+
+Please find detailed experiment results [here](https://drive.google.com/drive/folders/13jTfhQVB2qojOD3cb9EF7-Uy_afYUbDE?usp=sharing).
 ## Important Links
-Train Dataset Link: http://images.cocodataset.org/zips/test2017.zip 
-Style Image: https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg 
-Content Image: https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg 
-Best Model: https://github.com/yash-choudhary/Neural-Style-Transfer/raw/master/Results/best_model.pth
+1. Train Dataset Link: http://images.cocodataset.org/zips/test2017.zip 
+2. Style Image: https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg 
+3. Content Image: https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg 
+4. Best Model: https://github.com/yash-choudhary/Neural-Style-Transfer/raw/master/Results/best_model.pth
 
 References:
-1. ![Style Transfer Guide](https://www.fritz.ai/style-transfer/)
-2. ![Breaking Down Leon Gatys’ Neural Style Transfer in PyTorch](https://towardsdatascience.com/breaking-down-leon-gatys-neural-style-transfer-in-pytorch-faf9f0eb79db)
-3. ![Intuitive Guide to Neural Style Transfer](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-neural-style-transfer-ef88e46697ee)
-4. ![A Neural Algorithm of Artistic Style ByLeon A. Gatys, Alexander S. Ecker, Matthias Bethge](https://arxiv.org/abs/1508.06576)
-5. ![Perceptual Losses for Real-Time Style Transfer and Super-Resolution by Justin Johnson, Alexandre Alahi, Li Fei-Fei](https://arxiv.org/abs/1603.08155)
-6. ![Neural Style Transfer on Real Time Video (With Full implementable code)](https://towardsdatascience.com/neural-style-transfer-on-real-time-video-with-full-implementable-code-ac2dbc0e9822)
+1. [Style Transfer Guide](https://www.fritz.ai/style-transfer/)
+2. [Breaking Down Leon Gatys’ Neural Style Transfer in PyTorch](https://towardsdatascience.com/breaking-down-leon-gatys-neural-style-transfer-in-pytorch-faf9f0eb79db)
+3. [Intuitive Guide to Neural Style Transfer](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-neural-style-transfer-ef88e46697ee)
+4. [A Neural Algorithm of Artistic Style ByLeon A. Gatys, Alexander S. Ecker, Matthias Bethge](https://arxiv.org/abs/1508.06576)
+5. [Perceptual Losses for Real-Time Style Transfer and Super-Resolution by Justin Johnson, Alexandre Alahi, Li Fei-Fei](https://arxiv.org/abs/1603.08155)
+6. [Neural Style Transfer on Real Time Video (With Full implementable code)](https://towardsdatascience.com/neural-style-transfer-on-real-time-video-with-full-implementable-code-ac2dbc0e9822)
 7. ![Classic Neural Style Transfer](https://github.com/halahup/NeuralStyleTransfer)
 4. ![Fast Neural Style Transfer using Lua](https://github.com/lengstrom/fast-style-transfer)
 5. ![Fast Neural Style Transfer using Python](https://github.com/eriklindernoren/Fast-Neural-Style-Transfer)
