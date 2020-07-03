@@ -1,6 +1,10 @@
 # Neural Style Transfer
 This is the submission repo for the Neural Style Transfer challange by Myelinfoundry.
 
+<p align="center">
+  <img src="assets/animate.gif" width="650">
+</p>
+
 According to Wikipedia, Neural Style Transfer (NST) also called Artistic Style Transfer refers to a class of software algorithms that manipulate digital images, or videos, in order to adopt the appearance or visual style of another image. NST algorithms are characterized by their use of deep neural networks for the sake of image transformation.
 
 In simple words, Neural style transfer is the process of creating art using computers. It is the process of painting the contents of one image with the style of another.
@@ -88,7 +92,10 @@ The quality of the stylized image is defined by a custom loss function that has 
 4. Numpy == 1.18.1
 5. PIL == 5.4.1
 6. tqdm == 4.45.0
-The notebook was checked on CUDA Version == 10.1
+7. Matplotlib == 3.2.1
+8. OpenCV == 4.2.0.34
+9. CUDA Version == 10.1
+
 ## Usage:
 Just open the provided notebook.ipynb in colab or your local GPU enabled machine. Run the fast_trainer function to train your custom model or use the provided pretrained model with the test function to generate results.
 
@@ -112,34 +119,34 @@ You can access the resuling images of each experiment in "experiments" folder of
 
 ## Result
 The 3 best outputs from my models are:
-<p align="center">
-  <img src="Results/best_output1.jpg" width="900">
-  <br>
-  <em>Fig 7. Best Result 1 [More Weight to Style]</em>
-</p>
-<p align="center">
-  <img src="Results/best_output2.jpg" width="900">
-  <br>
-  <em>Fig 8. Best Result 2 [Balanced Style and content]</em>
-</p>
-<p align="center">
-  <img src="Results/best_output3.jpg" width="900">
-  <br>
-  <em>Fig 9. Best Result 3 [More Weight to Content]</em>
-</p>
-<p align="center">
-  <img src="assets/animate.gif" width="900">
-  <br>
-  <em>Fig 10. Animation of improving outputs.</em>
-</p>
 
+<p align="center">
+  <img src="assets/train_loss.png" width="500">
+  <br>
+  <em>Fig 7. Training Loss</em>
+</p>
+<p align="center">
+  <img src="Results/best_output1.jpg" width="500">
+  <br>
+  <em>Fig 8. Best Result 1 [More Weight to Style]</em>
+</p>
+<p align="center">
+  <img src="Results/best_output2.jpg" width="500">
+  <br>
+  <em>Fig 9. Best Result 2 [Balanced Style and content]</em>
+</p>
+<p align="center">
+  <img src="Results/best_output3.jpg" width="500">
+  <br>
+  <em>Fig 10. Best Result 3 [More Weight to Content]</em>
+</p>
 
 Please find detailed experiment results [here](https://drive.google.com/drive/folders/13jTfhQVB2qojOD3cb9EF7-Uy_afYUbDE?usp=sharing).
 ## Important Links
 1. Train Dataset Link: http://images.cocodataset.org/zips/test2017.zip 
 2. Style Image: https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg 
 3. Content Image: https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg 
-4. Best Model: https://github.com/yash-choudhary/Neural-Style-Transfer/raw/master/Results/best_model.pth
+4. Best Model: https://www.dropbox.com/s/7xvmmbn1bx94exz/best_model.pth?dl=1
 
 References:
 1. [Style Transfer Guide](https://www.fritz.ai/style-transfer/)
@@ -149,5 +156,5 @@ References:
 5. [Perceptual Losses for Real-Time Style Transfer and Super-Resolution by Justin Johnson, Alexandre Alahi, Li Fei-Fei](https://arxiv.org/abs/1603.08155)
 6. [Neural Style Transfer on Real Time Video (With Full implementable code)](https://towardsdatascience.com/neural-style-transfer-on-real-time-video-with-full-implementable-code-ac2dbc0e9822)
 7. ![Classic Neural Style Transfer](https://github.com/halahup/NeuralStyleTransfer)
-4. ![Fast Neural Style Transfer using Lua](https://github.com/lengstrom/fast-style-transfer)
-5. ![Fast Neural Style Transfer using Python](https://github.com/eriklindernoren/Fast-Neural-Style-Transfer)
+8. ![Fast Neural Style Transfer using Lua](https://github.com/lengstrom/fast-style-transfer)
+9. ![Fast Neural Style Transfer using Python](https://github.com/eriklindernoren/Fast-Neural-Style-Transfer)
