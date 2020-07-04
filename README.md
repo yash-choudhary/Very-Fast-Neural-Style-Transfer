@@ -1,4 +1,4 @@
-# Neural Style Transfer
+# Neural Style Transfer  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yash-choudhary/Neural-Style-Transfer/Fast%20Neural%20Style%20Transfer.ipynb)
 This is the submission repo for the Neural Style Transfer challange by Myelinfoundry.
 
 <p align="center">
@@ -96,8 +96,24 @@ The quality of the stylized image is defined by a custom loss function that has 
 8. OpenCV == 4.2.0.34
 9. CUDA Version == 10.1
 
-## Usage:
-Just open the provided notebook.ipynb in colab or your local GPU enabled machine. Run the fast_trainer function to train your custom model or use the provided pretrained model with the test function to generate results.
+## Installation and Usage:
+
+Clone this repo:
+```
+git clone https://github.com/yash-choudhary/Neural-Style-Transfer.git
+```
+
+Install the dependencies
+```
+pip3 install -r requirements.txt
+```
+
+Just open the provided Fast Neural Style Transfer.ipynb in colab or your local GPU enabled machine. Run the **fast_trainer** function to train your custom model or use the provided pretrained model with the **test_image** function to generate results.
+```
+For reading purpose or more visually appealing results, you can just open the provided html file in a browser.
+```
+
+You can also see this notebook on [Kaggle.](https://www.kaggle.com/yashchoudhary/fast-neural-style-transfer)
 
 ## Experiments
 I experimented with different layer formats and style and content weights and there are the results of each experiment.
@@ -142,13 +158,14 @@ The 3 best outputs from my models are:
 </p>
 
 Please find detailed experiment results [here](https://drive.google.com/drive/folders/13jTfhQVB2qojOD3cb9EF7-Uy_afYUbDE?usp=sharing).
+
 ## Important Links
 1. Train Dataset Link: http://images.cocodataset.org/zips/test2017.zip 
 2. Style Image: https://github.com/myelinfoundry-2019/challenge/raw/master/picasso_selfportrait.jpg 
 3. Content Image: https://github.com/myelinfoundry-2019/challenge/raw/master/japanese_garden.jpg 
 4. Best Model: https://www.dropbox.com/s/7xvmmbn1bx94exz/best_model.pth?dl=1
 
-References:
+## References:
 1. [Style Transfer Guide](https://www.fritz.ai/style-transfer/)
 2. [Breaking Down Leon Gatys’ Neural Style Transfer in PyTorch](https://towardsdatascience.com/breaking-down-leon-gatys-neural-style-transfer-in-pytorch-faf9f0eb79db)
 3. [Intuitive Guide to Neural Style Transfer](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-neural-style-transfer-ef88e46697ee)
