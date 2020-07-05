@@ -1,5 +1,4 @@
 # Neural Style Transfer  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yash-choudhary/Neural-Style-Transfer/blob/master/Fast%20Neural%20Style%20Transfer.ipynb)
-This is the submission repo for the Neural Style Transfer challange by Myelinfoundry.
 
 <p align="center">
   <img src="assets/animate.gif" width="650">
